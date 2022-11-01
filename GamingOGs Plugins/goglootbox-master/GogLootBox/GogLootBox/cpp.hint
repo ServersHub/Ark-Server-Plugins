@@ -1,0 +1,2 @@
+#define GOGLOOTBOX_API __declspec(dllexport)
+#define GOGLOOTBOX_API __declspec(dllimport)

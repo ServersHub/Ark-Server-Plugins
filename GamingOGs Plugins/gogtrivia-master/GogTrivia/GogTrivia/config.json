@@ -1,0 +1,104 @@
+{
+  "LicenseKey": "key",
+  "AnswerTime": 10,
+  "QuestionInterval": 10,
+  "PlayersRequired": 2,
+  "Questions": {
+    "Question1": [
+      "Answer1",
+      "Answer2"
+    ],
+    "Question2": [
+      "Answer2",
+      "Answer3"
+    ]
+  },
+  "Rewards": {
+    "RandomReward": true,
+    "Min": 1,
+    "Max": 5,
+    "Data": [
+      {
+        "Enabled": true,
+        "Type": "Points",
+        "Min": 100,
+        "Max": 200
+      },
+      {
+        "Enabled": true,
+        "Type": "Commands",
+        "Min": 1,
+        "Max": 3,
+        "Commands": [
+          "command 1 {}",
+          "command 2 {}"
+        ]
+      },
+      {
+        "Enabled": true,
+        "Type": "Dinos",
+        "Min": 1,
+        "Max": 3,
+        "Dinos": [
+          {
+            "Level": 280,
+            "Neutered": false,
+            "Blueprint": "Blueprint'/Game/PrimalEarth/Dinos/Achatina/Achatina_Character_BP.Achatina_Character_BP'",
+            "SaddleBlueprint": "",
+            "SaddleQuality": 8,
+            "BabyDino": false,
+            "ImprintAmount": 0
+          },
+          {
+            "Level": 280,
+            "Neutered": false,
+            "Blueprint": "Blueprint'/Game/PrimalEarth/Dinos/Allosaurus/Allo_Character_BP.Allo_Character_BP'",
+            "SaddleBlueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_AlloSaddle.PrimalItemArmor_AlloSaddle'",
+            "SaddleQuality": 8,
+            "BabyDino": false,
+            "ImprintAmount": 0
+          }
+        ]
+      },
+      {
+        "Enabled": true,
+        "Type": "Items",
+        "Items": [
+          {
+            "Min": 1,
+            "Max": 5,
+            "Quality": 10,
+            "ForceBlueprint": false,
+            "Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Cloth/PrimalItemArmor_ClothPants.PrimalItemArmor_ClothPants'"
+          },
+          {
+            "Min": 1,
+            "Max": 5,
+            "Quality": 3,
+            "ForceBlueprint": true,
+            "Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponSword.PrimalItem_WeaponSword'"
+          }
+        ]
+      },
+      {
+        "Enabled": true,
+        "Type": "Boxes",
+        "Min": 1,
+        "Max": 10,
+        "Boxes": [
+          "dinobox",
+          "mysterybox"
+        ]
+      }
+    ]
+  },
+  "Commands": {
+    "Answer": "/trivia"
+  },
+  "Messages": {
+    "Sender": "GogTrivia",
+    "WrongAnswer": "You're wrong",
+    "PlayerWon": "{} answered correct and rewarded {}",
+    "Help": "To answer this trivia type {} answer"
+  }
+}

@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Protection">
+      <UniqueIdentifier>{2f3d7899-bfe9-4afb-9576-06bdad08a384}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules">
+      <UniqueIdentifier>{8456f395-e1b3-4124-aa17-a2647404f0d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Storage">
+      <UniqueIdentifier>{5b7d349f-f334-48d6-8aa7-3f9972ff89b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{67c72f7a-7a54-4a41-a7b7-c3c3a31c0cc4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Protection\Commands.cpp">
+      <Filter>Protection</Filter>
+    </ClCompile>
+    <ClCompile Include="Protection\Hooks.cpp">
+      <Filter>Protection</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Config.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Helpers.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Storage\Database.cpp">
+      <Filter>Storage</Filter>
+    </ClCompile>
+    <ClCompile Include="Protection\Application.cpp">
+      <Filter>Protection</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\BlackList.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\EntityFactory.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\HarvestManager.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\OnlineMonitor.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\ProtManager.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\TeamManager.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Protection\CommandDelegates.cpp">
+      <Filter>Protection</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Logging.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Protection\Exports.cpp">
+      <Filter>Protection</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\NotificationsManager.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\DragManager.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\ArenaManager.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Protection\Commands.h">
+      <Filter>Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="Protection\Hooks.h">
+      <Filter>Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Config.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Helpers.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Storage\Database.h">
+      <Filter>Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="Storage\DatabaseImpl.h">
+      <Filter>Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Storage\DataTypes.h">
+      <Filter>Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="Storage\Storage.h">
+      <Filter>Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="Storage\DBAdapters.h">
+      <Filter>Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="Storage\TCache.h">
+      <Filter>Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="Protection\Application.h">
+      <Filter>Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\BlackList.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\EntityFactory.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\HarvestManager.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\OnlineMonitor.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\ProtManager.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\TeamManager.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Protection\CommandDelegates.h">
+      <Filter>Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Logging.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Protection\Exports.h">
+      <Filter>Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\NotificationsManager.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\DragManager.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\ArenaManager.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="PluginInfo.json">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GogProtection.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

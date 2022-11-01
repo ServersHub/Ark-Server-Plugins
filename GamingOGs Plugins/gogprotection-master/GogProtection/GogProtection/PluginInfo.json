@@ -1,0 +1,6 @@
+{
+  "FullName": "PlayerProtection",
+  "Description": "Auto protection and offline raid protection",
+  "Version": 1.8,
+  "MinApiVersion": 3.4
+}

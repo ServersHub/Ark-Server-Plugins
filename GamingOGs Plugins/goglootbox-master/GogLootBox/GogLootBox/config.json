@@ -1,0 +1,398 @@
+{
+  "General": {
+    "LicenseKey": "key",
+    "Mysql": {
+      "MysqlHost": "184.176.80.173",
+      "MysqlUser": "GOGM",
+      "MysqlPass": "Gog7gEWw&*RE#G",
+      "MysqlDB": "ark_lootboxes"
+    },
+    "Metrics": {
+      "EnableMetrics": false,
+      "Channels": {
+        "OpenBoxesChannel": {
+          "Tag": "LootBoxChannel",
+          "BotName": "OpenBoxesBot"
+        },
+        "TradeBoxesChannel": {
+          "Tag": "LootBoxChannel",
+          "BotName": "TradeBoxesBot"
+        },
+        "ReceiveBoxesChannel": {
+          "Tag": "LootBoxChannel",
+          "BotName": "ReceiveBoxesBot"
+        }
+      }
+    },
+    "RandomBoxes": {
+      "DontRepeatBoxes": 10,
+      "Boxes": [
+        "dinobox",
+        "mysterybox",
+        "freebox"
+      ]
+    },
+    "ExcludeDinos": {
+      "Ragnarok": [
+        "DinoBP1",
+        "DinoBP2"
+      ],
+      "Abberation": [
+        "DinoBP1",
+        "DinoBP2"
+      ]
+    },
+    "Messages": {
+      "Sender": "GamingOGs.com LootBoxes",
+      "WonItem": "You have won {}!",
+      "WonBox": "{} has gambled and won {} lootbox!",
+      "NoBoxesLeft": "You don't have loot boxes left",
+      "BoxNotExist": "Wrong box name",
+      "TraderId": "Your trader ID is {}",
+      "WrongTraderId": "Wrong trader ID",
+      "ShowBoxes": "Your boxes:\n{}",
+      "ShowBoxesEmpty": "You have no boxes left",
+      "Unlucky": "{} has gambled and lost {} amount of points for {} lootbox. Better luck next time!\"",
+      "CantGamble": "You can't gamble this box",
+      "NoPermission": "You don't have permissions to open this loot box",
+      "NoPoints": "You don't have enough points",
+      "TradedBoxes": "You have been traded {} amount of {} lootboxes by user {}.",
+      "TradedBoxesSuccess": "You've traded boxes successfully",
+      "TradeBoxesBroadcast": "{} traded {} amount of lootboxes to {}.",
+      "IncompatibleMap": "You can't open such boxes on this map",
+      "CannotGiveDino": "Couldn't give a dino, try again",
+      "CannotGiveItem": "Couldn't give an item, try again",
+      "BoxesDisabled": "Boxes are disabled for {}",
+      "ContactAdmins": "An internal error occured. Please contact server admins"
+    },
+    "Commands": {
+      "Chat": {
+        "OpenBox": "/lb.open",
+        "ShowBoxes": "/lb.boxes",
+        "Gamble": "/lb.gamble",
+        "TradeBox": "/lb.trade",
+        "TraderId": "/lb.id"
+      },
+      "Console": {
+        "GiveBox": "lb.givebox",
+        "SetBox": "lb.setbox",
+        "RemoveBox": "lb.removebox",
+        "RandBox": "lb.randbox",
+        "GiveBoxAll": "lb.giveboxall",
+        "SetBoxAll": "lb.setboxall",
+        "RemoveBoxAll": "lb.removeboxall",
+        "RandBoxAll": "lb.randboxall",
+        "EnableBoxes": "lb.enable",
+        "DisableBoxes": "lb.disable"
+      },
+      "Rcon": {
+        "GiveBox": "lb.givebox",
+        "SetBox": "lb.setbox",
+        "RemoveBox": "lb.removebox",
+        "RandBox": "lb.randbox",
+        "GiveBoxAll": "lb.giveboxall",
+        "SetBoxAll": "lb.setboxall",
+        "RemoveBoxAll": "lb.removeboxall",
+        "RandBoxAll": "lb.randboxall",
+        "EnableBoxes": "lb.enable",
+        "DisableBoxes": "lb.disable"
+      }
+    }
+  },
+  "Boxes": {
+    "CHIBIBOX": {
+      "GamblePercent": 25,
+      "GamblePrice": 100,
+      "Permission": "",
+      "MinAmount": 1,
+      "MaxAmount": 1,
+      "Items": [
+        {
+          "Type": "item",
+          "Description": "1x Allosaurus Chibi (Common)",
+          "Probability": 40,
+          "Items": [
+            {
+              "MinQuality": 0,
+              "MaxQuality": 0,
+              "Amount": 1,
+              "AddStat": 0,
+              "BlueprintChance": 0,
+              "Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Allosaurus.PrimalItemSkin_ChibiDino_Allosaurus'"
+            }
+          ]
+        }
+      ]
+    },
+    "WEAPONBOX": {
+      "GamblePercent": 25,
+      "GamblePrice": 200,
+      "Permission": "",
+      "MinAmount": 1,
+      "MaxAmount": 1,
+      "Items": [
+        {
+          "Type": "item",
+          "Description": "Assault Rifle (Common)",
+          "Probability": 40,
+          "Items": [
+            {
+              "MinQuality": 5,
+              "MaxQuality": 10,
+              "Amount": 1,
+              "AddStat": 0,
+              "BlueprintChance": 10,
+              "Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponRifle.PrimalItem_WeaponRifle'"
+            }
+          ]
+        },
+        {
+          "Type": "item",
+          "Description": "Bow (Common)",
+          "Probability": 50,
+          "Items": [
+            {
+              "MinQuality": 5,
+              "MaxQuality": 10,
+              "Amount": 1,
+              "AddStat": 0,
+              "BlueprintChance": 10,
+              "Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponBow.PrimalItem_WeaponBow'"
+            }
+          ]
+        }
+      ]
+    },
+    "DINOBOX": {
+      "GamblePercent": 25,
+      "GamblePrice": 200,
+      "Permission": "",
+      "MinAmount": 1,
+      "MaxAmount": 1,
+      "Items": [
+        {
+          "Type": "dino",
+          "Description": "Achatina (Common)",
+          "Probability": 50,
+          "Dinos": [
+            {
+              "Level": 224,
+              "BabyDino": false,
+              "ImprintAmount": 0,
+              "Neutered": false,
+              "Blueprint": "Blueprint'/Game/PrimalEarth/Dinos/Achatina/Achatina_Character_BP.Achatina_Character_BP'",
+              "SaddleBlueprint": "",
+              "SaddleQuality": 0
+            }
+          ]
+        },
+        {
+          "Type": "dino",
+          "Description": "X-Raptor (Common)",
+          "Probability": 50,
+          "Dinos": [
+            {
+              "Level": 224,
+              "BabyDino": false,
+              "ImprintAmount": 0,
+              "Neutered": false,
+              "Blueprint": "Blueprint'/Game/Genesis/Dinos/BiomeVariants/Bog_Raptor/Bog_Raptor_Character_BP.Bog_Raptor_Character_BP'",
+              "SaddleBlueprint": "",
+              "SaddleQuality": 0
+            }
+          ]
+        }
+      ]
+    },
+    "BABYDINOBOX": {
+      "GamblePercent": 25,
+      "GamblePrice": 200,
+      "Permission": "",
+      "MinAmount": 1,
+      "MaxAmount": 1,
+      "Items": [
+        {
+          "Type": "dino",
+          "Description": "Baby Allosaurus (Common)",
+          "Probability": 50,
+          "Dinos": [
+            {
+              "Level": 224,
+              "BabyDino": true,
+              "ImprintAmount": 0,
+              "Neutered": false,
+              "Blueprint": "Blueprint'/Game/PrimalEarth/Dinos/Allosaurus/Allo_Character_BP.Allo_Character_BP'",
+              "SaddleBlueprint": "",
+              "SaddleQuality": 0
+            }
+          ]
+        },
+        {
+          "Type": "dino",
+          "Description": "Baby Anklyosaurus (Common)",
+          "Probability": 50,
+          "Dinos": [
+            {
+              "Level": 224,
+              "BabyDino": true,
+              "ImprintAmount": 0,
+              "Neutered": false,
+              "Blueprint": "Blueprint'/Game/PrimalEarth/Dinos/Ankylo/Ankylo_Character_BP.Ankylo_Character_BP'",
+              "SaddleBlueprint": "",
+              "SaddleQuality": 0
+            }
+          ]
+        }
+      ]
+    },
+    "WATERDINOBOX": {
+      "GamblePercent": 25,
+      "GamblePrice": 200,
+      "Permission": "",
+      "MinAmount": 1,
+      "MaxAmount": 1,
+      "Items": [
+        {
+          "Type": "dino",
+          "Description": "Anglerfish (Common)",
+          "Probability": 50,
+          "Dinos": [
+            {
+              "Level": 224,
+              "BabyDino": false,
+              "ImprintAmount": 0,
+              "Neutered": false,
+              "Blueprint": "Blueprint'/Game/PrimalEarth/Dinos/Anglerfish/Angler_Character_BP.Angler_Character_BP'",
+              "SaddleBlueprint": "",
+              "SaddleQuality": 0
+            }
+          ]
+        },
+        {
+          "Type": "dino",
+          "Description": "Basilosaurus (Common)",
+          "Probability": 50,
+          "Dinos": [
+            {
+              "Level": 224,
+              "BabyDino": false,
+              "ImprintAmount": 0,
+              "Neutered": false,
+              "Blueprint": "Blueprint'/Game/PrimalEarth/Dinos/Basilosaurus/Basilosaurus_Character_BP.Basilosaurus_Character_BP'",
+              "SaddleBlueprint": "",
+              "SaddleQuality": 0
+            }
+          ]
+        }
+      ]
+    },
+    "BABYWATERDINOBOX": {
+      "GamblePercent": 25,
+      "GamblePrice": 200,
+      "Permission": "",
+      "MinAmount": 1,
+      "MaxAmount": 1,
+      "Items": [
+        {
+          "Type": "dino",
+          "Description": "Baby Anglerfish (Common)",
+          "Probability": 50,
+          "Dinos": [
+            {
+              "Level": 224,
+              "BabyDino": true,
+              "ImprintAmount": 0,
+              "Neutered": false,
+              "Blueprint": "Blueprint'/Game/PrimalEarth/Dinos/Anglerfish/Angler_Character_BP.Angler_Character_BP'",
+              "SaddleBlueprint": "",
+              "SaddleQuality": 0
+            }
+          ]
+        },
+        {
+          "Type": "dino",
+          "Description": "Baby Basilosaurus (Common)",
+          "Probability": 50,
+          "Dinos": [
+            {
+              "Level": 224,
+              "BabyDino": true,
+              "ImprintAmount": 0,
+              "Neutered": false,
+              "Blueprint": "Blueprint'/Game/PrimalEarth/Dinos/Basilosaurus/Basilosaurus_Character_BP.Basilosaurus_Character_BP'",
+              "SaddleBlueprint": "",
+              "SaddleQuality": 0
+            }
+          ]
+        }
+      ]
+    },
+    "RANDOMBOX": {
+      "GamblePercent": 50,
+      "GamblePrice": 250,
+      "Permission": "",
+      "MinAmount": 1,
+      "MaxAmount": 1,
+      "Items": [
+        {
+          "Type": "command",
+          "Description": "1x Random Box",
+          "Probability": 50,
+          "Command": "RandBox {} 1"
+        }
+      ]
+    },
+    "VIPBOX": {
+      "GamblePercent": 25,
+      "GamblePrice": 100,
+      "Permission": "VIPRANK1",
+      "MinAmount": 1,
+      "MaxAmount": 1,
+      "Items": [
+        {
+          "Type": "item",
+          "Description": "Sword",
+          "Probability": 50,
+          "Items": [
+            {
+              "MinQuality": 5,
+              "MaxQuality": 5,
+              "Amount": 1,
+              "AddStat": 0,
+              "BlueprintChance": 50,
+              "Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponSword.PrimalItem_WeaponSword'"
+            }
+          ]
+        },
+        {
+          "Type": "dino",
+          "Description": "1 Rex",
+          "Probability": 50,
+          "Dinos": [
+            {
+              "Level": 150,
+              "BabyDino": false,
+              "ImprintAmount": 0,
+              "Neutered": false,
+              "Blueprint": "Blueprint'/Game/PrimalEarth/Dinos/Rex/Rex_Character_BP.Rex_Character_BP'",
+              "SaddleBlueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_RexSaddle.PrimalItemArmor_RexSaddle'",
+              "SaddleQuality": 5
+            }
+          ]
+        },
+        {
+          "Type": "beacon",
+          "Description": "1x Beacon",
+          "Probability": 50,
+          "ClassName": "SupplyCrate_Cave_QualityTier1_C"
+        },
+        {
+          "Type": "command",
+          "Description": "250 Points",
+          "Probability": 50,
+          "Command": "addpoints {} 250"
+        }
+      ]
+    }
+  }
+}

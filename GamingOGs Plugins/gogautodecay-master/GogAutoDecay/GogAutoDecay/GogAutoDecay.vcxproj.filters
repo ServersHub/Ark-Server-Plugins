@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="External">
+      <UniqueIdentifier>{0f382b11-392d-4b54-bdcf-7ce19bf5aeac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutoDecay">
+      <UniqueIdentifier>{f6582900-7ce1-4da4-89d0-dba032c10fcc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules">
+      <UniqueIdentifier>{1137eab4-c661-4ed8-85d3-0ab2d78eb2ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{1a964459-e0f7-4519-94af-e1a711a937f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Storage">
+      <UniqueIdentifier>{8d2a60cd-e9a9-4f09-a400-70d3b99f33f2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GogAutoDecay.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="PluginInfo.json">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="auto_decay\Application.h">
+      <Filter>AutoDecay</Filter>
+    </ClInclude>
+    <ClInclude Include="auto_decay\Commands.h">
+      <Filter>AutoDecay</Filter>
+    </ClInclude>
+    <ClInclude Include="auto_decay\Hooks.h">
+      <Filter>AutoDecay</Filter>
+    </ClInclude>
+    <ClInclude Include="external\LootBoxInterface.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="external\PermissionsInterface.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="external\ShopInterface.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\ApiProxy.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\Config.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\ThreadSafeQueue.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\Timer.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\Types.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\Helpers.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\PlayerProps.h">
+      <Filter>Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\TeamProps.h">
+      <Filter>Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\Database.h">
+      <Filter>Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\DatabaseImpl.h">
+      <Filter>Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\Cache.h">
+      <Filter>Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\DBAdapters.h">
+      <Filter>Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\Storage.h">
+      <Filter>Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="modules\EntityFactory.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="modules\OnlineManager.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="modules\TeamManager.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="modules\RankGroupsManager.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="modules\BaseTimesManager.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="modules\PenaltyManager.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="modules\StructureOverrides.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="auto_decay\Application.cpp">
+      <Filter>AutoDecay</Filter>
+    </ClCompile>
+    <ClCompile Include="auto_decay\Commands.cpp">
+      <Filter>AutoDecay</Filter>
+    </ClCompile>
+    <ClCompile Include="auto_decay\Hooks.cpp">
+      <Filter>AutoDecay</Filter>
+    </ClCompile>
+    <ClCompile Include="external\LootBoxInterface.cpp">
+      <Filter>External</Filter>
+    </ClCompile>
+    <ClCompile Include="external\PermissionsInterface.cpp">
+      <Filter>External</Filter>
+    </ClCompile>
+    <ClCompile Include="external\ShopInterface.cpp">
+      <Filter>External</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="utils\Helpers.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\Database.cpp">
+      <Filter>Storage</Filter>
+    </ClCompile>
+    <ClCompile Include="modules\EntityFactory.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="modules\OnlineManager.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="modules\TeamManager.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="modules\RankGroupsManager.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="modules\BaseTimesManager.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="modules\PenaltyManager.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

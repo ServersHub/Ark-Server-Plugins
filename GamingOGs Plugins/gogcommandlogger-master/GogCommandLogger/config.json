@@ -1,0 +1,127 @@
+{
+  "LicenseKey": "key",
+  "ChannelGroups": [
+    {
+      "Identifier": "Protection",
+      "Chat": {
+        "ChannelTag": "TestChatCmdChannel",
+        "BotName": "ChatCmdBot",
+        "Commands": [
+          "/apinfo",
+          "/ptl",
+          "/ptloff",
+          "/setzone",
+          "/unsetzone",
+          "/showzones"
+        ]
+      },
+      "Console": {
+        "ChannelTag": "TestConsoleCmdChannel",
+        "BotName": "ConsoleCmdBot",
+        "Commands": [
+          "RemovePlayerProtection",
+          "ResetPlayerProtection",
+          "AddProtection",
+          "SetProtection",
+          "APReload",
+          "AddToBlacklist",
+          "RemoveFromBlacklist"
+        ]
+      },
+      "Rcon": {
+        "ChannelTag": "TestRconCmdChannel",
+        "BotName": "RconCmdBot",
+        "Commands": [
+          "RemovePlayerProtection",
+          "ResetPlayerProtection",
+          "AddProtection",
+          "SetProtection",
+          "APReload",
+          "AddToBlacklist",
+          "RemoveFromBlacklist"
+        ]
+      }
+    },
+    {
+      "Identifier": "LootBox",
+      "Chat": {
+        "ChannelTag": "TestChatCmdChannel",
+        "BotName": "ChatCmdBot",
+        "Commands": [
+          "/open",
+          "/boxes",
+          "/gamble",
+          "/checkreward",
+          "/checkkills",
+          "/gtrade"
+        ]
+      },
+      "Console": {
+        "ChannelTag": "TestConsoleCmdChannel",
+        "BotName": "ConsoleCmdBot",
+        "Commands": [
+          "gogbox.reload",
+          "givebox"
+        ]
+      },
+      "Rcon": {
+        "ChannelTag": "TestRconCmdChannel",
+        "BotName": "RconCmdBot",
+        "Commands": [
+          "gogbox.reload",
+          "givebox"
+        ]
+      }
+    },
+    {
+      "Identifier": "Default",
+      "Chat": {
+        "ChannelTag": "TestChatCmdChannel",
+        "BotName": "ChatCmdBot",
+        "Commands": []
+      },
+      "Console": {
+        "ChannelTag": "TestConsoleCmdChannel",
+        "BotName": "ConsoleCmdBot",
+        "Commands": []
+      },
+      "Rcon": {
+        "ChannelTag": "TestRconCmdChannel",
+        "BotName": "RconCmdBot",
+        "Commands": []
+      }
+    }
+  ],
+  "IgnoreChatCommands": [
+    "/Exclude1",
+    "/Exclude2"
+  ],
+  "IgnoreConsoleCommands": [
+    "Say",
+    "Exclude2"
+  ],
+  "IgnoreRconCommands": [
+    "getchat",
+    "listplayers",
+    "broadcast"
+  ],
+  "BlacklistChatCommands": [
+    "/Exclude1",
+    "/Exclude2"
+  ],
+  "BlacklistConsoleCommands": [
+    "Say",
+    "Exclude2"
+  ],
+  "BlacklistRconCommands": [
+    "getchat",
+    "listplayers",
+    "broadcast"
+  ],
+  "StaffGroups": [
+    "VIP1",
+    "VIP2",
+    "VIP3"
+  ],
+  "LogEverything": true
+}

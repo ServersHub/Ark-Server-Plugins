@@ -1,0 +1,6 @@
+{
+  "FullName": "AutoDecay",
+  "Description": "Auto-Decay/Clear-Lagg plugin",
+  "Version": 1.7,
+  "MinApiVersion": 3.4
+}

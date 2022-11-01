@@ -1,0 +1,3 @@
+# GogBountyHunter
+
+Bounty Hunter plugin

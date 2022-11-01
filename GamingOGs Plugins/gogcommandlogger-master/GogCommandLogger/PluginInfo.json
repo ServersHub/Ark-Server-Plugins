@@ -1,0 +1,6 @@
+{
+  "FullName": "CommandLogger",
+  "Description": "Logging chat/console/rcon commands",
+  "Version": 1.8,
+  "MinApiVersion": 3.4
+}

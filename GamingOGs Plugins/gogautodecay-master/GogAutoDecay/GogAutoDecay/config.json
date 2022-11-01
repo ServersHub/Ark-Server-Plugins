@@ -1,0 +1,119 @@
+{
+  "LicenseKey": "key",
+  "Mysql": {
+    "MysqlHost": "host",
+    "MysqlUser": "user",
+    "MysqlPass": "pass",
+    "MysqlDB": "db"
+  },
+  "DiscordChannel": {
+    "Tag": "AutoDecayChannel",
+    "BotName": "AutoDecayLogger"
+  },
+  "CheckUnclaimedDinosInterval": 2,
+  "UnclaimedDinosDecayTime": 2,
+  "EnableStructuresDestroyer": true,
+  "EnableDinosDestroyer": true,
+  "EnableAutoBreedingControl": true,
+  "RankGroups": [
+    {
+      "Identifier": "Default",
+      "Weight": 10,
+      "Permissions": [
+        "Default"
+      ]
+    },
+    {
+      "Identifier": "Donators",
+      "Weight": 20,
+      "Permissions": [
+        "Donators",
+        "DonatorsPlus"
+      ]
+    },
+    {
+      "Identifier": "Admins",
+      "Weight": 30,
+      "Permissions": [
+        "Admins",
+        "Owners"
+      ]
+    }
+  ],
+  "DecayTimings": [
+    {
+      "RankGroups": [
+        "Default"
+      ],
+      "StructuresDecayTime": 20,
+      "DinosDecayTime": 2
+    },
+    {
+      "RankGroups": [
+        "Donators"
+      ],
+      "StructuresDecayTime": 40,
+      "DinosDecayTime": 2
+    },
+    {
+      "RankGroups": [
+        "Admins"
+      ],
+      "StructuresDecayTime": 60,
+      "DinosDecayTime": 2
+    }
+  ],
+  "SoloStructureOverrides": [
+    {
+      "BlueprintPath": "Blueprint'/Game/Mods/StructuresPlusMod/Misc/AutoTurret/BP_AutoTurret.BP_AutoTurret'",
+      "DecayTime": 100
+    },
+    {
+      "BlueprintPath": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/BP_Turret.BP_Turret'",
+      "DecayTime": 100
+    }
+  ],
+  "DuoStructureOverrides": [
+    {
+      "BlueprintPath": "Blueprint'/Game/Mods/StructuresPlusMod/Ladders/Wood/BP_Ladder_Wood.BP_Ladder_Wood'",
+      "PlacedOn": "Blueprint'/Game/Mods/StructuresPlusMod/Structures/Foundations/Square/Metal/BP_Foundation_Metal.BP_Foundation_Metal'",
+      "DecayTime": 150
+    },
+    {
+      "BlueprintPath": "Blueprint'/Game/Mods/StructuresPlusMod/Ladders/Metal/BP_Ladder_Metal.BP_Ladder_Metal'",
+      "PlacedOn": "Blueprint'/Game/Mods/StructuresPlusMod/Structures/Foundations/Square/Metal/BP_Foundation_Metal.BP_Foundation_Metal'",
+      "DecayTime": 150
+    }
+  ],
+  "Penalties": {
+    "Points": {
+      "Enabled": true,
+      "MinDay": 10,
+      "MaxDay": 20,
+      "BasePenalty": 100,
+      "PenaltyStep": 10
+    },
+    "Boxes": {
+      "Enabled": true,
+      "MinDay": 10,
+      "MaxDay": 20,
+      "BasePenalty": 1,
+      "PenaltyStep": 1,
+      "Boxes": [
+        "lootbox",
+        "premiumbox",
+        "babydinobox"
+      ]
+    }
+  },
+  "Messages": {
+    "Sender": "Auto-Decay",
+    "CheckTribe": "Time before decay {}",
+    "CheckTribeOnline": "Requested tribe is online",
+    "NoTarget": "Target is not a structure or not found"
+  },
+  "Commands": {
+    "CheckTribe": "/checktribe",
+    "GetBlueprint": "bp"
+  }
+}

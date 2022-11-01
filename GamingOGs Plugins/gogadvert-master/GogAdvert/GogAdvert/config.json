@@ -1,0 +1,375 @@
+{
+  "LicenseKey": "key",
+  "SenderName": "GOG",
+  "WelcomeMessageEnabled": true,
+  "WelcomeMessage": {
+    "Message": "WELCOME TO GAMINGOGS SERVERS! PRESS F1 FOR HELP AND INFORMATION REGARDING THE SERVERS! YOU CAN DONATE HERE: BUY.GAMINGOGS.COM OR YOU CAN JOIN DISCORD HERE: GAMINGOGS.COM/DISCORD",
+    "Type": "ClientChat",
+    "Color": [
+      0.0000,
+      0.5686,
+      1.0000,
+      1.0
+    ],
+    "DisplayScale": 1.3,
+    "DisplayTime": 15.0
+  },
+  "AdvertGroups": [
+    {
+      "Interval": 60,
+      "Messages": [
+        {
+          "Message": "WANT TO BUY POINTS OR LOOTBOXES? HEAD OVER TO BUY.GAMINGOGS.COM !",
+          "Type": "ServerChat",
+          "Color": [
+            0.0353,
+            0.7020,
+            0.1922,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        },
+        {
+          "Message": "YOU CAN BUY POINTS AND LOOTBOXES AT BUY.GAMINGOGS.COM",
+          "Type": "ServerChat",
+          "Color": [
+            0.0353,
+            0.7020,
+            0.1922,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        },
+        {
+          "Message": "WANT TO BUY RANKS OR PERKS? HEAD OVER TO BUY.GAMINGOGS.COM !",
+          "Type": "ServerChat",
+          "Color": [
+            0.0353,
+            0.7020,
+            0.1922,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        },
+        {
+          "Message": "DID YOU BY DONATING YOUR HELPING THE SERVER GROW! BUY.GAMINGOGS.COM",
+          "Type": "ServerChat",
+          "Color": [
+            0.0353,
+            0.7020,
+            0.1922,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        },
+        {
+          "Message": "OUR DONATING SYSTEM IS NON-P2W ! EVERYTHING YOU CAN DONATE FOR CAN BE EARNED IN-GAME!",
+          "Type": "ServerChat",
+          "Color": [
+            0.0353,
+            0.7020,
+            0.1922,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        },
+        {
+          "Message": "BE SURE TO CHECKOUT BUY.GAMINGOGS.COM FOR SOME DISCOUNTS AND SALES!",
+          "Type": "ServerChat",
+          "Color": [
+            0.0353,
+            0.7020,
+            0.1922,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        },
+        {
+          "Message": "ALL DONATIONS HELP FUND THE DEDICATED HARDWARE AND CUSTOM CONTENT FOR GOG!",
+          "Type": "ServerChat",
+          "Color": [
+            0.0353,
+            0.7020,
+            0.1922,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        }
+      ]
+    },
+    {
+      "Interval": 70,
+      "Messages": [
+        {
+          "Message": "WANT TO KNOW HOW OUR ORP/AP WORKS? HEAD OVER TO GAMINGOGS.COM/DOCS",
+          "Type": "Notification",
+          "Color": [
+            0.0000,
+            0.1686,
+            1.0000,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        },
+        {
+          "Message": "DID YOU GET RAIDED? NOT A PROBLEM! JOIN DISCORD AND APPLY FOR RAID PROTECTION !",
+          "Type": "Notification",
+          "Color": [
+            0.0000,
+            0.1686,
+            1.0000,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        }
+      ]
+    },
+    {
+      "Interval": 120,
+      "Messages": [
+        {
+          "Message": "GAMINGOGS WAS FOUNDED BACK IN 2018. (TRIVA)",
+          "Type": "Notification",
+          "Color": [
+            0.0000,
+            0.8824,
+            1.0000,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        },
+        {
+          "Message": "DO YOU BELIEVE SOMEONE BROKE THE RULES? CREATE A TICKET IN OUR DISCORD AND REPORT THEM!",
+          "Type": "Notification",
+          "Color": [
+            0.0000,
+            0.8824,
+            1.0000,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        },
+        {
+          "Message": "GAMINGOGS SUPPORTS OUR MILITARY VETERANS AND WE OFFER A MILITARY VETERAN PROGRAM IN OUR DISCORD!",
+          "Type": "Notification",
+          "Color": [
+            0.0000,
+            0.8824,
+            1.0000,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        },
+        {
+          "Message": "DO YOU HAVE AN IDEA YOU WANT GAMINGOGS TO CREATE OR BRING TO LIFE? COME TELL THEOWLSKY OR NBN IN DISCORD!",
+          "Type": "Notification",
+          "Color": [
+            0.0000,
+            0.8824,
+            1.0000,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        },
+        {
+          "Message": "GAMINGOGS IS VERY INTERESTED IN HOSTING OTHER GAMING SERVERS, JOIN DISCORD AND SHARE YOUR THOUGHTS!",
+          "Type": "Notification",
+          "Color": [
+            0.0000,
+            0.8824,
+            1.0000,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        },
+        {
+          "Message": "DID YOU KNOW GAMINGOGS REWARDS PLAYERS/TRIBES WHO HELP MARKET AND PROMOTE THE SERVERS? JOIN DISCORD TO CLAIM REWARD!",
+          "Type": "Notification",
+          "Color": [
+            0.0000,
+            0.8824,
+            1.0000,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        },
+        {
+          "Message": "GOT A SUGGESTION? WANT SOMETHING ADJUSTED? POST INSIDE SUGGESTIONS CHANNEL IN THE SERVERS DISCORD!",
+          "Type": "Notification",
+          "Color": [
+            0.0000,
+            0.8824,
+            1.0000,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        },
+        {
+          "Message": "DID YOU KNOW WE HAVE VIDEO TUTORIALS ON OUR WEBSITE? GAMINGOGS.COM/TUTORIALS",
+          "Type": "Notification",
+          "Color": [
+            0.0000,
+            0.8824,
+            1.0000,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        },
+        {
+          "Message": "YOU CAN EARN POINTS/LOOTBOXES AND REWARDS BY COMPLETING QUESTS! GAMINGOGS.COM/QUESTS",
+          "Type": "Notification",
+          "Color": [
+            0.0000,
+            0.8824,
+            1.0000,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        },
+        {
+          "Message": "IF YOU HELP PROMOTE THE SERVER WE WILL REWARD YOU GREATLY OVER IN DISCORD!",
+          "Type": "Notification",
+          "Color": [
+            0.0000,
+            0.8824,
+            1.0000,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        },
+        {
+          "Message": "ON OUR WEBSITE GAMINGOGS.COM WE SHOWCASE IN-DEPT DETAILS ABOUT ALL OF OUR CUSTOM CONTENT!",
+          "Type": "Notification",
+          "Color": [
+            0.0000,
+            0.8824,
+            1.0000,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        },
+        {
+          "Message": "DID YOU KNOW THEOWLSKY IS ACTUALLY AN OWL ! (TRIVA)",
+          "Type": "Notification",
+          "Color": [
+            0.0000,
+            0.8824,
+            1.0000,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        },
+        {
+          "Message": "DID YOU KNOW NAUGHTY/NBN USED TO BE A PIMP ! (TRIVA)",
+          "Type": "Notification",
+          "Color": [
+            0.0000,
+            0.8824,
+            1.0000,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        },
+        {
+          "Message": "DO YOU BELIEVE YOU HAVE SOME TALENT THAT COULD HELP GAMINGOGS? COME LET THEOWLSKY OR NAUGHTY/NBN KNOW IN DISCORD!",
+          "Type": "Notification",
+          "Color": [
+            0.0000,
+            0.8824,
+            1.0000,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        }
+      ]
+    },
+    {
+      "Interval": 45,
+      "Messages": [
+        {
+          "Message": "COME JOIN OUR DISCORD TODAY AT: GAMINGOGS.COM/DISCORD",
+          "Type": "ClientChat",
+          "Color": [
+            1.0000,
+            0.8000,
+            0.0000,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        },
+        {
+          "Message": "COME JOIN OUR WEBSITE TODAY AT: GAMINGOGS.COM",
+          "Type": "ClientChat",
+          "Color": [
+            1.0000,
+            0.8000,
+            0.0000,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        },
+        {
+          "Message": "INTERESTED IN OUR WEEKLY EVENTS? HEAD OVER TO GAMINGOGS.COM/EVENTS",
+          "Type": "ClientChat",
+          "Color": [
+            1.0000,
+            0.8000,
+            0.0000,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        },
+        {
+          "Message": "WE ARE HIRING STAFF MEMBERS! COME APPLY AT: GAMINGOGS.COM/APPLY",
+          "Type": "ClientChat",
+          "Color": [
+            1.0000,
+            0.8000,
+            0.0000,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        },
+        {
+          "Message": "HEAD OVER TO: GAMINGOGS.COM/DOCS FOR FULL LIST OF SERVER SETTINGS!",
+          "Type": "ClientChat",
+          "Color": [
+            1.0000,
+            0.8000,
+            0.0000,
+            0.8
+          ],
+          "DisplayScale": 1.3,
+          "DisplayTime": 15.0
+        }
+      ]
+    }
+  ]
+}

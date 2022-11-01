@@ -1,0 +1,15 @@
+{
+  "LicenseKey": "key",
+  "MySQL": {
+    "Host": "127.0.0.1",
+    "User": "root",
+    "Password": "password",
+    "Database": "gog_stats_ark"
+  },
+  "SpecialDinos": {
+    "CustomTableName": "Blueprint'/Game/PrimalEarth/Dinos/Gorilla/Gorilla_Character_BP.Gorilla_Character_BP'",
+    "CustomTableName02": "Blueprint'/Game/PrimalEarth/Dinos/Carno/MegaCarno_Character_BP.MegaCarno_Character_BP'",
+    "CustomTableName03": "Blueprint'/Game/PrimalEarth/Dinos/Archaeopteryx/Archa_Character_BP.Archa_Character_BP'"
+  },
+  "ServerId": "my_server"
+}

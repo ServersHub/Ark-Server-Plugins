@@ -1,0 +1,150 @@
+{
+  "LicenseKey": "key",
+  "EnableMetrics": true,
+  "Mysql": {
+    "MysqlHost": "66.70.181.224",
+    "MysqlUser": "root",
+    "MysqlPass": "unf78eyuhb7f3b4yunfi37h",
+    "MysqlDB": "atlas_rankup_test"
+  },
+  "DiscordChannel": {
+    "Tag": "ProtectionChannel",
+    "BotName": "GogProtectionLogger"
+  },
+  "BlackListGroups": [
+    "VIP1",
+    "VIP2",
+    "VIP3"
+  ],
+  "FlyerDinoCarryExceptions": [
+    "BP_1",
+    "BP_2"
+  ],
+  "GroundDinoDragExceptions": [
+    "BP_1",
+    "BP_2"
+  ],
+  "BossArenas": [
+    {
+      "x": 10.5,
+      "y": 10.5,
+      "z": 10.5,
+      "radius": 100.0
+    },
+    {
+      "x": 20.5,
+      "y": 20.5,
+      "z": 20.5,
+      "radius": 50.0
+    }
+  ],
+  "AP": {
+    "General": {
+      "DefaultDuration": 72,
+      "ProtectPlayers": true,
+      "ProtectDinos": true,
+      "ProtectStructures": true,
+      "PlayersProtectionPercent": 0.25,
+      "DinosProtectionPercent": 0.25,
+      "StructuresProtectionPercent": 0.25,
+      "AllowProtectedPlayersKillEnemyPlayers": false,
+      "AllowProtectedPlayersKillEnemyDinos": false,
+      "AllowProtectedPlayersDestroyEnemyStructures": false,
+      "AllowFriendlyDamage": false,
+      "CanCarryProtected": false,
+      "CanDragProtected": false,
+      "HandleAlliances": true,
+      "HarvestModifier": 1.5,
+      "PlayersNotificationsInterval": 60,
+      "DinosNotificationsInterval": 60,
+      "StructuresNotificationsInterval": 60,
+      "Tag": "[PVE] ",
+      "Icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/ConditionBrave_Icon.ConditionBrave_Icon"
+    },
+    "Messages": {
+      "Sender": "Protection",
+      "ChatInfo": "Our AutoProtection system gives you {} hours of player/structure protection against raiders",
+      "ProtectionExpired": "Your protecton is expired",
+      "RemainingProtectionTime": "You have {} protection time left",
+      "HaveNotPermissions": "You haven't permissions to do that",
+      "ProtectionDisable": "Protection has been disabled",
+      "ProtectionReset": "Protection has been reset",
+      "PlayerNotFound": "Requested player not found",
+      "APIsActive": "Your Target Has Active AP. Remaining protection time is {}",
+      "ORPIsActive": "Your Target Has Active ORP. {}% damage taken.",
+      "TryingAttackBeingUnderAP": "You are under auto protection and can't damage unprotected enemies",
+      "ORPBadZoneId": "Incorrect Area ID",
+      "ORPZonesLimitExceeded": "Your ORP Zones limit is exceeded",
+      "ORPZoneAdded": "New ORP Zone is registered",
+      "ORPZoneRemoved": "ORP Zone is removed",
+      "ORPZoneNotFound": "Wrong ID, Zone isn't found",
+      "ORPZones": "Your ORP Zones:\n{}",
+      "InORPZone": "You're in ORP Zone ID: {}",
+      "NotInORPZone": "You aren't in ORP Zone",
+      "NoORPZones": "You have not registered ORP Zones"
+    },
+    "Commands": {
+      "ChatInfo": "/ptinfo",
+      "ChatStatus": "/ptl",
+      "ChatDisable": "/ptloff",
+      "ChatSetZone": "/setzone",
+      "ChatUnsetZone": "/unsetzone",
+      "ChatDisplayZones": "/showzones",
+      "RemoveProtection": "RemovePlayerProtection",
+      "ResetProtection": "ResetPlayerProtection",
+      "AddProtection": "AddProtection",
+      "SetProtection": "SetProtection",
+      "Reload": "APReload",
+      "AddToBlacklist": "AddToBlacklist",
+      "RemoveFromBlacklist": "RemoveFromBlacklist",
+      "EnableORP": "enableorp",
+      "DisableORP": "disableorp"
+    }
+  },
+  "ORP": {
+    "EnableRangeBasedORP": true,
+    "OverrideDefaultPercent": true,
+    "MaxLocations": 2,
+    "MaxRange": 15000.0,
+    "ProtectPlayers": true,
+    "ProtectDinos": true,
+    "ProtectStructures": true,
+    "PlayersProtectionPercent": 0.25,
+    "DinosProtectionPercent": 0.25,
+    "StructuresProtectionPercent": 0.25,
+    "TurretDamageModifier": 3.0,
+    "AllowTurrets": true,
+    "InfiniteTurretAmmo": true,
+    "MaxDuration": 10,
+    "ShortDelay": 1,
+    "LongDelay": 120,
+    "NoBattleTime": 5,
+    "PlayersNotificationsInterval": 60,
+    "DinosNotificationsInterval": 60,
+    "StructuresNotificationsInterval": 60,
+    "PercentOverrides": [
+      {
+        "RangeBegin": 0,
+        "RangeEnd": 24,
+        "PlayersProtectionPercent": 0.33,
+        "DinosProtectionPercent": 0.33,
+        "StructuresProtectionPercent": 0.33
+      },
+      {
+        "RangeBegin": 25,
+        "RangeEnd": 48,
+        "PlayersProtectionPercent": 0.66,
+        "DinosProtectionPercent": 0.66,
+        "StructuresProtectionPercent": 0.66
+      },
+      {
+        "RangeBegin": 49,
+        "RangeEnd": 72,
+        "PlayersProtectionPercent": 1.0,
+        "DinosProtectionPercent": 1.0,
+        "StructuresProtectionPercent": 1.0
+      }
+    ]
+  },
+  "DebugMode": true
+}
