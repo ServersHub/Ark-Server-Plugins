@@ -1,0 +1,45 @@
+Below is a list of the custom commands that Simple Ban accepts. 
+[list]
+[*]All commands require server admin status
+[*][i]*tribe admin is not same as server admin*[/i]
+[*]Works with in-game console or RCON 
+[*]Commands output to Server Game Log
+[*][i]*no output goes to console or rcon terminal*[/i]
+[*]In-game command prefix: admincheat scriptcommand
+[*]RCON command prefix: scriptcommand
+[*]Commands are NOT case-sensitive
+[/list]
+
+[b]SimpleBanLog[/b]
+There are two commands related to the persistent BanLog. The BanLog contains entries for players that are kicked for being banned or for borrowing Ark from someone who is banned. 
+
+Outputs all entries from BanLog to the Server Game Log.
+[code]scriptcommand simplebanlog[/code]
+Purges all contents of the BanLog. There is no undo. Server Game Log will display how many entries were purged. 
+[code]scriptcommand simplebanlog delete[/code]
+
+[b]SimpleBanStatus[/b]
+There are two commands related to the StatusLog. The StatusLog contains entries related to the mod's function, such as initializing settings/ban lists, and checking players. It does not persist across restarts. 
+
+Outputs all entries from StatusLog to the Server Game Log.
+[code]scriptcommand simplebanstatus[/code]
+Purges all contents of the StatusLog. There is no undo. Server Game Log will display how many entries were purged. 
+[code]scriptcommand simplebanstatus delete[/code]
+
+[b]SimpleBanPlayerData[/b]
+There are two commands related to the persistent PlayerData. The PlayerData contains entries for each player logging into the game, it contains their SteamID and any Lender SteamIDs they have borrowed Ark from.
+
+Outputs all entries from PlayerData to the Server Game Log.
+[code]scriptcommand simplebanplayerdata[/code]
+Purges all contents of the PlayerData. There is no undo. Server Game Log will display how many entries were purged. 
+[code]scriptcommand simplebanplayerdata delete[/code]
+
+[b]SimpleBanRefresh[/b]
+This will cause a refresh of all settings (if using settings json) and ban lists.
+[i]If Simple Ban is currently checking any players with Steam, the execution of this command will be delayed until that is done.[/i]
+[code]scriptcommand simplebanrefresh[/code]
+
+[b]SimpleBanForceCheck[/b]
+This will force a re-check for all online players. Intended to be used after SimpleBanRefresh in order to check all players against updated ban list/s.
+[i]If Simple Ban is currently refreshing settings or ban lists, the execution of this command will be delayed until that is done.[/i]
+[code]scriptcommand simplebanforcecheck[/code]

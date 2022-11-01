@@ -1,0 +1,151 @@
+[i]More detailed descriptions are further below the examples.[/i]
+
+[b]SimpleBan INI Settings[/b]
+Mod INI settings always go in your server's GameUserSettings.ini file. 
+
+Example:
+[code]
+[ServerSettings]
+BanListURL="http://server/ban/list"
+
+[SimpleBan]
+SettingsJsonUrl="http://url/to/your/settings/json"
+SteamApiKey=YourSteamDevApiKey
+BanListUrls="http://banlisturl1 http://banlisturl2"
+BanIDs=BanSteamID1 BanSteamID2 
+MaxLogPersist=1000
+SendLogsToAdminChat=False
+DisablePlayerFamilySharingData=False
+KickMessage=You are not allowed on this Ark.
+DisableServerLog=False
+RefreshSettingsIntervalMinutes=60
+[/code]
+
+[b]Settings JSON[/b]
+[list]
+[*]Optional, supply the url in INI setting 'SettingsJsonUrl'
+[*]Values override any supplied as INI for same setting
+[*]Below example shows all settings available in JSON (some are INI only)
+[*]The field "Simple" is required with value "Ban" to recognize the JSON
+[/list]
+[code]
+{
+	"Simple":"Ban",
+	"BanListUrls":[
+		"http://banlisturl1",
+		"http://banlisturl2"
+	],
+	"BanIDs":[
+		"BanSteamID1",
+		"BanSteamID2"
+	],
+	"MaxLogPersist":1000,
+	"SendLogsToAdminChat":false,
+	"DisablePlayerFamilySharingData":false,
+	"KickMessage":"You are not allowed on this Ark.",
+	"RefreshSettingsIntervalMinutes":60
+}
+[/code]
+
+[b]ServerSettings - BanListURL[/b]
+[i]INI Only, [ServerSettings] Section[/i]
+**Wrap the value with double quotes as shown above**
+This is the WC provided setting for the ban list url. 
+It goes under the main [ServerSettings] section in the GUS INI. 
+Simple Ban checks for this setting having a valid url as it initializes your ban lists.
+[i](see BanListUrls below)[/i]
+If it has a valid url then this will be used for ban list in addition with any urls provided in the 'BanListUrls' setting. 
+
+[i]Simple Ban expects any Ban List to contain a list of Steam IDs to ban. The Steam IDs should be separated by line break, i.e. one Steam ID per line.[/i]
+
+[b]SettingsJsonUrl[/b]
+[i]INI Only[/i]
+**Wrap the value with double quotes as shown above**
+Not used by default. If you would like to be able to change some settings without restarting the game server, you can supply a url here for the above structured json. The url needs to return the json 'raw'. This means it cannot be a link to a site that shows the file within some embedded content etc. For example, if you use PasteBin.com then you will want to use the 'raw' link provided on the paste. The url also just needs to be resolvable by the game server so if a local web server is running, you could use a localhost url. 
+
+[b]SteamApiKey[/b]
+[i]INI Only[/i]
+This is the only [b]REQUIRED[/b] [SimpleBan] setting. This setting is INI only! This is for security reasons because your Steam API Key should be kept secure and if you provide it in a publicly available json, that is not very secure... :) 
+Obtaining a Steam API Key is pretty easy. Follow the below Steam Link to do that. If you are in the Steam client it will take you right to instructions on how to obtain the key, within the client. Or on your browser, it will require you to login to your Steam account. This is because the Steam API Key is associated to your account, and you can only have one at a time. 
+
+[url=https://steamcommunity.com/dev/apikey]Get a Steam API Key[/url] 
+
+[i]Simple Ban only uses this value to communicate with Steam's Web API.[/i]
+
+[b]BanListUrls[/b]
+[i]INI or JSON[/i]
+Not used by default. If you would like to provide additional URLs for ban lists then you can use this setting. Simple Ban will use all Ban Lists provided cumulatively to check players for ban. 
+
+If using this in GUS INI the values can separated by space or by pipe | character.
+**Wrap the entire set of urls with double quotes as shown in example above**
+
+[i]Simple Ban expects any Ban List to contain a list of Steam IDs to ban. The Steam IDs should be separated by line break, i.e. one Steam ID per line.[/i]
+
+[b]BanIDs[/b]
+[i]INI or JSON[/i]
+Not used by default. If you would like to provide a list of Steam IDs to ban directly, this setting can be used. Simple Ban will use this along with all Ban List urls provided to build a cumulative ban list to check players with. 
+
+If using this in GUS INI the values can separated by space or by pipe | character.
+
+[b]MaxLogPersist[/b]
+[i]INI or JSON[/i]
+Default is 1000. Simple Ban will keep a log of any players ban kicked referred to as the 'BanLog'. BanLog data persists across server restarts. This setting controls how many logs to keep. When the log exceeds this number, the oldest entries will be removed until the log is at this max again. 
+
+The data is persisted in the worldsave as well as to SAV file:
+[code]..\ShooterGame\Saved\SaveGames\SimpleBan\BanLog.SAV[/code]
+On server start if SAV file exists, its contents will overwrite what is used within the worldsave data. If no SAV file exists, whatever has been persisted in worldsave will be written to a new SAV file. 
+
+If the server uses the launch option -servergamelog then BanLog entries as they occur will write to the server game log. 
+
+You can also uses these two commands related to the BanLog, either from in-game console or via RCON: 
+
+This will dump the contents of the BanLog to your server game log.
+[code]admincheat ScriptCommand SimpleBanLog[/code]
+This will purge the contents of the BanLog. All entries will be deleted from worldsave and from SAV file. There is no undo. 
+[code]admincheat ScriptCommand SimpleBanLog Delete[/code]
+
+[b]SendLogsToAdminChat[/b]
+[i]INI or JSON[/i]
+Default is False. Setting this to True will tell Simple Ban to send all logs, as they occur, to all logged in Admin's chat windows. This will be BanLog entries as well as StatusLog entries.
+
+StatusLog? 
+The StatusLog is kept in memory only while the game server is running. 
+It does not persist across restarts. 
+It contains entries regarding how the mod is working. 
+If the server is using launch option -servergamelog then these entries also show in server's game log as they occur. 
+
+You can also uses these two commands related to the StatusLog, either from in-game console or via RCON: 
+
+This will dump the contents of the StatusLog to your server game log.
+[code]admincheat ScriptCommand SimpleBanStatus[/code]
+This will purge the contents of the StatusLog. All entries will be deleted from the log kept in memory. There is no undo. 
+[code]admincheat ScriptCommand SimpleBanStatus Delete[/code]
+
+[b]DisablePlayerFamilySharingData[/b]
+[i]INI or JSON[/i]
+Default is False. If True Simple Ban will NOT store a cache of player family sharing data. This cache is used for efficiency so Simple Ban does not call to Steam if not needed- such as if player owns Ark, or if a previously cached lender's ID is on a ban list. 
+
+If not disabled this data persists within the worldsave as well as in a SAV file located at: 
+[code]..\ShooterGame\Saved\SaveGames\SimpleBan\PlayerFamilySharing.SAV[/code]
+On server start if SAV file exists, its contents will overwrite what is used within the worldsave data. If no SAV file exists, whatever has been persisted in worldsave will be written to a new SAV file. (if not disabled)
+
+You can also uses these two commands related to the PlayerData, either from in-game console or via RCON: 
+
+This will dump the contents of the PlayerData to your server game log.
+[code]admincheat ScriptCommand SimpleBanPlayerData[/code]
+This will purge the contents of the PlayerData. All entries will be deleted from worldsave and from SAV file. There is no undo. Players will be checked against Steam again on their next login. 
+[code]admincheat ScriptCommand SimpleBanPlayerData Delete[/code]
+
+[b]KickMessage[/b]
+[i]INI or JSON[/i]
+Default value is: You are not allowed on this Ark.
+This is the message displayed to a player if they are kicked for being banned. 
+
+[b]DisableServerLog[/b]
+[i]INI Only[/i]
+Default is False. If True, Simple Ban will not write any logs to the server game log as entries occur, for either BanLog or StatusLog. 
+
+[b]RefreshSettingsIntervalMinutes[/b]
+[i]INI or JSON[/i]
+Default is 60 minutes. This setting represents the number of minutes to use for the settings refresh interval. Simple Ban uses this to load settings and ban lists again for the interval specified, or the default of 60 min/1 hour if not supplied. 
+

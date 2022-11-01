@@ -1,0 +1,6 @@
+"Blueprint'/Game/Mods/AdminBooster/Items/Signs/Blueprints/BP_Workbench.BP_Workbench'"
+"Blueprint'/Game/Mods/AdminBooster/Items/Structures/Structures/AdminShield/Blueprints/BP_TekForcefield.BP_TekForcefield'"
+"Blueprint'/Game/Mods/AdminBooster/Blueprints/Items/Structures/Structures/AdminShield/Blueprints/BP_AdminForcefield.BP_AdminForcefield'"
+"Blueprint'/Game/Mods/AdminBooster/Items/Structures/Structures/Workbench/Blueprint/V2/BP_SmithyPlus.BP_SmithyPlus'"
+"Blueprint'/Game/Mods/AdminBooster/Blueprints/Items/Structures/Structures/Workbench/Blueprint/V1/BP_Workbench.BP_Workbench'"
+"Blueprint'/Game/Mods/AdminBooster/Blueprints/Items/Structures/Structures/Workbench/Blueprint/V2/BP_Workbench.BP_Workbench'"

@@ -1,0 +1,42 @@
+Welcome to GamingOGs event map; this map is created explicitly for server admins and owners who love to host events. This event map is basically to replace the outdated event map that everyone uses. In our event map, you'll host just about any event/area you can think of and we have created this map to maximize FPS and performance boost for all players.
+
+[b]Mod ID:[/b] 2190423194
+[b]Publicly Released:[/b] 08/08/2020
+This map will work on any mods.
+
+Get your own Ark server here! - [url=https://nitra.do/NakedZombo] Nitrado [/url]
+Checkout GameServerApp! - [url=https://gameserverapp.com/?camp=GamingOGs] GameServerApp [/url]
+
+[h1]Official Links: [/h1]
+[url=https://discord.gg/YadtVbB] Discord [/url]
+[url=http://gamingogs.com/] Website [/url]
+[url=https://arkserverapi.com/resources/authors/gamingogs.815/] Ark Survival Evolved Plugins [/url]
+
+[h1]Map Features [/h1]
+[b]Note:[/b] Some of the areas and arenas are under construction; please know the arenas with nothing built on them will most likely be getting upgrades in the upcoming patches.
+[list]
+[*] Starter lobby (Hangout zone) - Spawn area for everyone to hang out and chill.
+[*] King of the hill (Player vs. Player) - Large scale player vs. player arena.
+[*] Creative building (Build events) - Flatlands to host server events.
+[*] Event stage (In-person events) - Small arena where you can host in-person events.
+[*] Greenscreen room (Content creator event) - Small area created for content creators/server owners/admins/devs to take photoshop grade level screenshots and use them to help promote/market your content.
+[*] Holiday area (Holiday-themed events) - Medium area where different holiday themes are presented for all players to enjoy.
+[*] Paintball area (Player vs. Player) - Medium-scale player vs. player arenas.
+[*] Dino races area (Race-themed events) - Large scale arena allows anyone to set up race type events.
+[*] Parkour area (Parkour challenge events) - Medium-scale area allows for parkour type challenges for prizes and rewards.[/list]
+
+[url=https://steamcommunity.com/workshop/filedetails/discussion/2190423194/2798377275386164374/] [img]https://i.imgur.com/DLwoXaw.png[/img] [/url] [url=https://steamcommunity.com/workshop/filedetails/discussion/2190423194/2798377275386527838/] [img]https://i.imgur.com/1z8iNVS.png[/img] [/url]
+
+[h1]F.A.Q: [/h1]
+
+[h2]Is this map optimized? [/h2]
+Yes, unlike some of the other event maps on the steam workshop we created this map to ensure it was fully optimized to give the highest amount of FPS client and server sided to ensure this runs as smooth as possible when hosting events with large audiences. We also have our arenas setup using a level-streaming system, which allows you to load the resources without putting much strain on your computer hardware.
+
+[h2]Do you plan on adding new arenas? [/h2]
+Yes! We are very interested in adding new arenas. We are very excited to work closely with the community of players/server owners/admins, and so forth to provide the best event map possible. If you have any suggestions or areas you would like us to create, please head over to the discussions page and leave me some suggestions!
+
+[b]If you enjoy our mod please give us:[/b] [img]https://i.imgur.com/p7Fv1Z6.gif[/img]
+
+[url=https://discord.gg/YadtVbB] [img]https://i.imgur.com/5bJ0qra.png[/img] [/url]
+
+[url=https://gameserverapp.com/?camp=GamingOGs] [img]https://i.imgur.com/HS2Jj6W.png[/img] [/url]
