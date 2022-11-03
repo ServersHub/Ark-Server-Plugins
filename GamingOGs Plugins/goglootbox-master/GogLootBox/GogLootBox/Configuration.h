@@ -61,7 +61,7 @@ namespace LootBox
 		}
 
 		void Load();
-		std::string GetLicenseKey();
+		void LoadConfig();
 		void CheckMapCompatibility(const std::string& mapName);
 
 		[[nodiscard]] const std::string& MysqlHost() const noexcept { return m_mysqlHost; }

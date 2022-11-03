@@ -21,7 +21,7 @@ namespace BountyHunter
 
 	inline BountyTarget target;
 
-	std::string GetLicenseKey();
+	void LoadConfig();
 
 	FString Msg(const std::string& title);
 
