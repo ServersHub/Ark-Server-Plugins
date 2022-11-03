@@ -65,7 +65,7 @@ namespace Stats
 		return config_["ServerId"].get<std::string>();
 	}
 
-	inline std::string GetLicenseKey()
+	inline void LoadConfig()
 	{
 		const std::string configPath = ArkApi::Tools::GetCurrentDir() + "/ArkApi/Plugins/Statistics/config.json";
 		std::ifstream file{ configPath };
@@ -84,13 +84,6 @@ namespace Stats
 			throw std::runtime_error(std::string{ "Parse error: " } + e.what());
 		}
 		file.close();
-
-		if (!config_.contains("/LicenseKey"_json_pointer))
-		{
-			throw std::runtime_error("Can't load license key");
-		}
-
-		return config_["/LicenseKey"_json_pointer].get<std::string>();
 	}
 
 }

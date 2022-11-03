@@ -26,6 +26,7 @@ namespace LootBox
 		}
 
 		m_SetCommands();
+
 	}
 
 	void App::Shutdown()

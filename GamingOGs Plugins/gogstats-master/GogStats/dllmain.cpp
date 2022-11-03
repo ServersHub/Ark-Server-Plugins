@@ -20,6 +20,7 @@ BOOL APIENTRY DllMain(HMODULE hModule,
 	case DLL_PROCESS_ATTACH:
 	{
 		Log::Get().Init("Statistics");
+		Stats::LoadConfig();
 		Stats::Store::Get().Initialize(Stats::GetDBConfig());
 		Stats::SetHooks();
 		break;

@@ -43,6 +43,8 @@ namespace AutoDecay
 
 	inline nlohmann::json& GetConfiguration()
 	{
+		if (config_root_.empty())
+			ParseConfiguration();
 		return config_root_;
 	}
 

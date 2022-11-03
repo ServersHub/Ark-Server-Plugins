@@ -25,11 +25,6 @@ namespace GogTrivia::Platform
 {
     inline nlohmann::json conf;
 
-    inline nlohmann::json& Conf()
-    {
-        return conf;
-    }
-
 #ifdef ARK
 	inline std::string GetConfigPath()
 	{
@@ -42,19 +37,7 @@ namespace GogTrivia::Platform
 	}
 #endif
 
-#ifdef ARK
-	inline void GivePoints(int amount, uint64 steam_id)
-	{
-		ArkShop::Points::AddPoints(amount, steam_id);
-	}
-#else
-	inline void GivePoints(int amount, uint64 steam_id)
-	{
-		AtlasShop::Points::AddPoints(amount, steam_id);
-	}
-#endif
-
-    inline std::string GetLicenseKey()
+	inline void LoadConfig()
 	{
 		const std::string config_path = Platform::GetConfigPath();
 		std::ifstream file{ config_path };
@@ -66,14 +49,26 @@ namespace GogTrivia::Platform
 
 		file >> conf;
 		file.close();
-
-		if (!conf.contains("/LicenseKey"_json_pointer))
-		{
-			throw std::runtime_error("Can't load license key");
-		}
-
-		return conf["/LicenseKey"_json_pointer].get<std::string>();
 	}
+
+    inline nlohmann::json& Conf()
+    {
+		if (conf.empty())
+			LoadConfig();
+        return conf;
+    }
+
+#ifdef ARK
+	inline void GivePoints(int amount, uint64 steam_id)
+	{
+		ArkShop::Points::AddPoints(amount, steam_id);
+	}
+#else
+	inline void GivePoints(int amount, uint64 steam_id)
+	{
+		AtlasShop::Points::AddPoints(amount, steam_id);
+	}
+#endif
 
 	inline FString Msg(const std::string& title)
 	{

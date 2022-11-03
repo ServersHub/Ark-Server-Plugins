@@ -9,6 +9,7 @@ namespace LootBox
 
 	void Configuration::Load()
 	{
+		LoadConfig();
 		m_mysqlHost = m_ParseString("/General/Mysql/MysqlHost"_json_pointer, "/General/Mysql/MysqlHost"_json_pointer, container);
 		m_mysqlUser = m_ParseString("/General/Mysql/MysqlUser"_json_pointer, "/General/Mysql/MysqlUser"_json_pointer, container);
 		m_mysqlPass = m_ParseString("/General/Mysql/MysqlPass"_json_pointer, "/General/Mysql/MysqlPass"_json_pointer, container);
@@ -77,7 +78,7 @@ namespace LootBox
 		m_ParseBoxes(container["Boxes"]);
 	}
 
-	std::string Configuration::GetLicenseKey()
+	void Configuration::LoadConfig()
 	{
 		const std::string configPath = ArkApi::Tools::GetCurrentDir() + "/ArkApi/Plugins/Lootboxes/config.json";
 		std::ifstream file{ configPath };
@@ -89,13 +90,6 @@ namespace LootBox
 
 		file >> container;
 		file.close();
-
-		if (!container.contains("/General/LicenseKey"_json_pointer))
-		{
-			throw std::runtime_error("Can't load license key");
-		}
-
-		return container["/General/LicenseKey"_json_pointer].get<std::string>();
 	}
 
 	void Configuration::CheckMapCompatibility(const std::string& mapName)

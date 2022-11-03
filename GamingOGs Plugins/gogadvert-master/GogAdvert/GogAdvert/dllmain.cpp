@@ -15,8 +15,10 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
     case DLL_PROCESS_ATTACH:
     {
         Log::Get().Init("Adverts");
+        GogAdvert::AdvertManager::Get().Initialize();
 		GogAdvert::Commands::Initialize();
 		GogAdvert::Hooks::Initialize();
+        break;
     }
     case DLL_PROCESS_DETACH:
 		GogAdvert::Commands::Shutdown();

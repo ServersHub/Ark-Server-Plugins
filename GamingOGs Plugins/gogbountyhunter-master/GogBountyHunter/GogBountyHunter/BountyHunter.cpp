@@ -190,7 +190,7 @@ namespace BountyHunter
 		}
 	}
 
-	std::string GetLicenseKey()
+	void LoadConfig()
 	{
 		const std::string config_path = Platform::GetConfigPath();
 
@@ -203,13 +203,6 @@ namespace BountyHunter
 
 		file >> json_conf;
 		file.close();
-
-		if (!json_conf.contains("/LicenseKey"_json_pointer))
-		{
-			throw std::runtime_error("Can't load license key");
-		}
-
-		return json_conf["/LicenseKey"_json_pointer].get<std::string>();
 	}
 
 	FString Msg(const std::string& title)
@@ -311,6 +304,8 @@ namespace BountyHunter
 
 	void Load()
 	{
+		LoadConfig();
+
 		auto& hooks = ArkApi::GetHooks();
 		hooks.SetHook("AShooterGameMode.HandleNewPlayer_Implementation", &Hook_AShooterGameMode_HandleNewPlayer_Implementation, &AShooterGameMode_HandleNewPlayer_Implementation_original);
 		hooks.SetHook("AShooterGameMode.Logout", &Hook_AShooterGameMode_Logout, &AShooterGameMode_Logout_original);
