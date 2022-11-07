@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GamingOGs Lootbox Editor v1.5</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="appstyle.qrc">
+    <normaloff>:/icons/appicon</normaloff>:/icons/appicon</iconset>
+  </property>
+  <widget class="QWidget" name="rootWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="title">
+         <string>Boxes</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="1" column="0">
+          <widget class="QTableWidget" name="tableWidget">
+           <attribute name="horizontalHeaderMinimumSectionSize">
+            <number>0</number>
+           </attribute>
+           <attribute name="verticalHeaderMinimumSectionSize">
+            <number>0</number>
+           </attribute>
+           <attribute name="verticalHeaderDefaultSectionSize">
+            <number>20</number>
+           </attribute>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1280</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="fileMenu">
+    <property name="geometry">
+     <rect>
+      <x>345</x>
+      <y>108</y>
+      <width>135</width>
+      <height>94</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="openAction"/>
+    <addaction name="saveAction"/>
+   </widget>
+   <widget class="QMenu" name="menuHTML">
+    <property name="title">
+     <string>HTML</string>
+    </property>
+    <addaction name="exportAdminAction"/>
+    <addaction name="exportClientAction"/>
+   </widget>
+   <widget class="QMenu" name="menuOptions">
+    <property name="title">
+     <string>Options</string>
+    </property>
+    <addaction name="editMySQLAction"/>
+   </widget>
+   <addaction name="fileMenu"/>
+   <addaction name="menuHTML"/>
+   <addaction name="menuOptions"/>
+  </widget>
+  <action name="openAction">
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="saveAction">
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="toolTip">
+    <string>Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="exportAdminAction">
+   <property name="text">
+    <string>Export (Admin)</string>
+   </property>
+  </action>
+  <action name="exportClientAction">
+   <property name="text">
+    <string>Export (Client)</string>
+   </property>
+  </action>
+  <action name="editMySQLAction">
+   <property name="text">
+    <string>Edit MySQL settings</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="appstyle.qrc"/>
+ </resources>
+ <connections/>
+</ui>

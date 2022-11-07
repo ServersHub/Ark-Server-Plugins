@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>icons/add.png</file>
+        <file>icons/delete.png</file>
+        <file>icons/edit.png</file>
+        <file>icons/invalid.png</file>
+        <file>icons/valid.png</file>
+        <file alias="appicon">icons/gamingogs_esports_logo_v2_6aW_icon.ico</file>
+    </qresource>
+</RCC>
