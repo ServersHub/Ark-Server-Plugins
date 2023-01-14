@@ -377,10 +377,12 @@ namespace ArkShop::Store
 			const int min_level = item_entry.value("MinLevel", 1);
 			const int max_level = item_entry.value("MaxLevel", 999);
 
-			auto* primal_character = static_cast<APrimalCharacter*>(player_controller->CharacterField());
+			auto* primal_character = player_controller->LastControlledPlayerCharacterField().Get();
+			if (!primal_character)
+				return false;
 			UPrimalCharacterStatusComponent* char_component = primal_character->MyCharacterStatusComponentField();
 
-			const int level = char_component->BaseCharacterLevelField() + char_component->ExtraCharacterLevelField();
+			const int level = char_component->GetCharacterLevel();
 			if (level < min_level || level > max_level)
 			{
 				ArkApi::GetApiUtils().SendChatMessage(player_controller, GetText("Sender"),
