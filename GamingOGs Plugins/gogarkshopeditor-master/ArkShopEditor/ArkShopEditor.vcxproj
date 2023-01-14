@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5D6F2BAD-3C91-3D0D-8E06-E57B3344A70D}</ProjectGuid>
+    <RootNamespace>ArkShopEditor</RootNamespace>
+    <Keyword>QtVS_v303</Keyword>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.18362.0</WindowsTargetPlatformMinVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>ArkShopEditor</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>ArkShopEditor</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>debug\</OutDir>
+    <IntDir>debug\</IntDir>
+    <TargetName>ArkShopEditor</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <IncludePath>$(SolutionDir)debug;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>release\</OutDir>
+    <IntDir>release\</IntDir>
+    <TargetName>ArkShopEditor</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)release;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>5.13.0-msvc2017_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtInstall>5.13.0-msvc2017_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;release;\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ObjectFileName>release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_NO_DEBUG;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>"C:\Program Files (x86)\Windows Kits\10\lib\10.0.18362.0\um\x64\ws2_32.lib";shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\openssl\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>-static -lpthread "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\ArkShopEditor.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>./$(Configuration)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>$(Configuration)</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>$(ProjectDir)</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;debug;\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ObjectFileName>debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>"C:\Program Files (x86)\Windows Kits\10\lib\10.0.18362.0\um\x64\ws2_32.lib";shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\openssl\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>-static -lpthread "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\ArkShopEditor.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>./$(Configuration)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>$(Configuration)</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>$(ProjectDir)</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="authentication\DetectDebug.cpp" />
+    <ClCompile Include="authentication\RemoteAuthentication.cpp" />
+    <ClCompile Include="addkitwidget.cpp" />
+    <ClCompile Include="editkitwidget.cpp" />
+    <ClCompile Include="kitswidget.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mainwindow.cpp" />
+    <ClCompile Include="sellstorewidget.cpp" />
+    <ClCompile Include="shopstorewidget.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="authentication\DetectDebug.h" />
+    <ClInclude Include="authentication\advobfuscator\Indexes.h" />
+    <ClInclude Include="authentication\advobfuscator\Inline.h" />
+    <ClInclude Include="authentication\advobfuscator\Log.h" />
+    <ClInclude Include="authentication\advobfuscator\MetaFSM.h" />
+    <ClInclude Include="authentication\advobfuscator\MetaRandom.h" />
+    <ClInclude Include="authentication\advobfuscator\MetaString.h" />
+    <ClInclude Include="authentication\advobfuscator\ObfuscatedCall.h" />
+    <ClInclude Include="authentication\advobfuscator\ObfuscatedCallWithPredicate.h" />
+    <ClInclude Include="authentication\RemoteAuthentication.h" />
+    <ClInclude Include="authentication\advobfuscator\Unroller.h" />
+    <QtMoc Include="addkitwidget.h">
+    </QtMoc>
+    <ClInclude Include="internal\dino.h" />
+    <QtMoc Include="editkitwidget.h">
+    </QtMoc>
+    <ClInclude Include="internal\fifo_map.hpp" />
+    <ClInclude Include="authentication\httplib\httplib.h" />
+    <ClInclude Include="internal\item.h" />
+    <ClInclude Include="internal\json.hpp" />
+    <ClInclude Include="internal\json_utils.h" />
+    <ClInclude Include="internal\kit.h" />
+    <ClInclude Include="internal\kits.h" />
+    <QtMoc Include="kitswidget.h">
+    </QtMoc>
+    <QtMoc Include="mainwindow.h">
+    </QtMoc>
+    <ClInclude Include="internal\node.h" />
+    <ClInclude Include="internal\sellstore.h" />
+    <ClInclude Include="internal\sellstoreitem.h" />
+    <QtMoc Include="sellstorewidget.h">
+    </QtMoc>
+    <ClInclude Include="internal\shopbeacon.h" />
+    <ClInclude Include="internal\shopcommand.h" />
+    <ClInclude Include="internal\shopdino.h" />
+    <ClInclude Include="internal\shopengram.h" />
+    <ClInclude Include="internal\shopexperience.h" />
+    <ClInclude Include="internal\shopitem.h" />
+    <ClInclude Include="internal\shopstore.h" />
+    <QtMoc Include="shopstorewidget.h">
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -Zi -MDd -std:c++17 -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -O2 -MD -std:c++17 -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="addkitwidget.ui">
+    </QtUic>
+    <QtUic Include="editkitwidget.ui">
+    </QtUic>
+    <QtUic Include="kitswidget.ui">
+    </QtUic>
+    <QtUic Include="mainwindow.ui">
+    </QtUic>
+    <QtUic Include="sellstorewidget.ui">
+    </QtUic>
+    <QtUic Include="shopstorewidget.ui">
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\add.png" />
+    <QtRcc Include="appstyle.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">appstyle</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">appstyle</InitFuncName>
+    </QtRcc>
+    <None Include="qdarkstyle\rc\arrow_down.png" />
+    <None Include="qdarkstyle\rc\arrow_down@2x.png" />
+    <None Include="qdarkstyle\rc\arrow_down_disabled.png" />
+    <None Include="qdarkstyle\rc\arrow_down_disabled@2x.png" />
+    <None Include="qdarkstyle\rc\arrow_down_focus.png" />
+    <None Include="qdarkstyle\rc\arrow_down_focus@2x.png" />
+    <None Include="qdarkstyle\rc\arrow_down_pressed.png" />
+    <None Include="qdarkstyle\rc\arrow_down_pressed@2x.png" />
+    <None Include="qdarkstyle\rc\arrow_left.png" />
+    <None Include="qdarkstyle\rc\arrow_left@2x.png" />
+    <None Include="qdarkstyle\rc\arrow_left_disabled.png" />
+    <None Include="qdarkstyle\rc\arrow_left_disabled@2x.png" />
+    <None Include="qdarkstyle\rc\arrow_left_focus.png" />
+    <None Include="qdarkstyle\rc\arrow_left_focus@2x.png" />
+    <None Include="qdarkstyle\rc\arrow_left_pressed.png" />
+    <None Include="qdarkstyle\rc\arrow_left_pressed@2x.png" />
+    <None Include="qdarkstyle\rc\arrow_right.png" />
+    <None Include="qdarkstyle\rc\arrow_right@2x.png" />
+    <None Include="qdarkstyle\rc\arrow_right_disabled.png" />
+    <None Include="qdarkstyle\rc\arrow_right_disabled@2x.png" />
+    <None Include="qdarkstyle\rc\arrow_right_focus.png" />
+    <None Include="qdarkstyle\rc\arrow_right_focus@2x.png" />
+    <None Include="qdarkstyle\rc\arrow_right_pressed.png" />
+    <None Include="qdarkstyle\rc\arrow_right_pressed@2x.png" />
+    <None Include="qdarkstyle\rc\arrow_up.png" />
+    <None Include="qdarkstyle\rc\arrow_up@2x.png" />
+    <None Include="qdarkstyle\rc\arrow_up_disabled.png" />
+    <None Include="qdarkstyle\rc\arrow_up_disabled@2x.png" />
+    <None Include="qdarkstyle\rc\arrow_up_focus.png" />
+    <None Include="qdarkstyle\rc\arrow_up_focus@2x.png" />
+    <None Include="qdarkstyle\rc\arrow_up_pressed.png" />
+    <None Include="qdarkstyle\rc\arrow_up_pressed@2x.png" />
+    <None Include="qdarkstyle\rc\base_icon.png" />
+    <None Include="qdarkstyle\rc\base_icon@2x.png" />
+    <None Include="qdarkstyle\rc\base_icon_disabled.png" />
+    <None Include="qdarkstyle\rc\base_icon_disabled@2x.png" />
+    <None Include="qdarkstyle\rc\base_icon_focus.png" />
+    <None Include="qdarkstyle\rc\base_icon_focus@2x.png" />
+    <None Include="qdarkstyle\rc\base_icon_pressed.png" />
+    <None Include="qdarkstyle\rc\base_icon_pressed@2x.png" />
+    <None Include="qdarkstyle\rc\branch_closed.png" />
+    <None Include="qdarkstyle\rc\branch_closed@2x.png" />
+    <None Include="qdarkstyle\rc\branch_closed_disabled.png" />
+    <None Include="qdarkstyle\rc\branch_closed_disabled@2x.png" />
+    <None Include="qdarkstyle\rc\branch_closed_focus.png" />
+    <None Include="qdarkstyle\rc\branch_closed_focus@2x.png" />
+    <None Include="qdarkstyle\rc\branch_closed_pressed.png" />
+    <None Include="qdarkstyle\rc\branch_closed_pressed@2x.png" />
+    <None Include="qdarkstyle\rc\branch_end.png" />
+    <None Include="qdarkstyle\rc\branch_end@2x.png" />
+    <None Include="qdarkstyle\rc\branch_end_disabled.png" />
+    <None Include="qdarkstyle\rc\branch_end_disabled@2x.png" />
+    <None Include="qdarkstyle\rc\branch_end_focus.png" />
+    <None Include="qdarkstyle\rc\branch_end_focus@2x.png" />
+    <None Include="qdarkstyle\rc\branch_end_pressed.png" />
+    <None Include="qdarkstyle\rc\branch_end_pressed@2x.png" />
+    <None Include="qdarkstyle\rc\branch_line.png" />
+    <None Include="qdarkstyle\rc\branch_line@2x.png" />
+    <None Include="qdarkstyle\rc\branch_line_disabled.png" />
+    <None Include="qdarkstyle\rc\branch_line_disabled@2x.png" />
+    <None Include="qdarkstyle\rc\branch_line_focus.png" />
+    <None Include="qdarkstyle\rc\branch_line_focus@2x.png" />
+    <None Include="qdarkstyle\rc\branch_line_pressed.png" />
+    <None Include="qdarkstyle\rc\branch_line_pressed@2x.png" />
+    <None Include="qdarkstyle\rc\branch_more.png" />
+    <None Include="qdarkstyle\rc\branch_more@2x.png" />
+    <None Include="qdarkstyle\rc\branch_more_disabled.png" />
+    <None Include="qdarkstyle\rc\branch_more_disabled@2x.png" />
+    <None Include="qdarkstyle\rc\branch_more_focus.png" />
+    <None Include="qdarkstyle\rc\branch_more_focus@2x.png" />
+    <None Include="qdarkstyle\rc\branch_more_pressed.png" />
+    <None Include="qdarkstyle\rc\branch_more_pressed@2x.png" />
+    <None Include="qdarkstyle\rc\branch_open.png" />
+    <None Include="qdarkstyle\rc\branch_open@2x.png" />
+    <None Include="qdarkstyle\rc\branch_open_disabled.png" />
+    <None Include="qdarkstyle\rc\branch_open_disabled@2x.png" />
+    <None Include="qdarkstyle\rc\branch_open_focus.png" />
+    <None Include="qdarkstyle\rc\branch_open_focus@2x.png" />
+    <None Include="qdarkstyle\rc\branch_open_pressed.png" />
+    <None Include="qdarkstyle\rc\branch_open_pressed@2x.png" />
+    <None Include="qdarkstyle\rc\checkbox_checked.png" />
+    <None Include="qdarkstyle\rc\checkbox_checked@2x.png" />
+    <None Include="qdarkstyle\rc\checkbox_checked_disabled.png" />
+    <None Include="qdarkstyle\rc\checkbox_checked_disabled@2x.png" />
+    <None Include="qdarkstyle\rc\checkbox_checked_focus.png" />
+    <None Include="qdarkstyle\rc\checkbox_checked_focus@2x.png" />
+    <None Include="qdarkstyle\rc\checkbox_checked_pressed.png" />
+    <None Include="qdarkstyle\rc\checkbox_checked_pressed@2x.png" />
+    <None Include="qdarkstyle\rc\checkbox_indeterminate.png" />
+    <None Include="qdarkstyle\rc\checkbox_indeterminate@2x.png" />
+    <None Include="qdarkstyle\rc\checkbox_indeterminate_disabled.png" />
+    <None Include="qdarkstyle\rc\checkbox_indeterminate_disabled@2x.png" />
+    <None Include="qdarkstyle\rc\checkbox_indeterminate_focus.png" />
+    <None Include="qdarkstyle\rc\checkbox_indeterminate_focus@2x.png" />
+    <None Include="qdarkstyle\rc\checkbox_indeterminate_pressed.png" />
+    <None Include="qdarkstyle\rc\checkbox_indeterminate_pressed@2x.png" />
+    <None Include="qdarkstyle\rc\checkbox_unchecked.png" />
+    <None Include="qdarkstyle\rc\checkbox_unchecked@2x.png" />
+    <None Include="qdarkstyle\rc\checkbox_unchecked_disabled.png" />
+    <None Include="qdarkstyle\rc\checkbox_unchecked_disabled@2x.png" />
+    <None Include="qdarkstyle\rc\checkbox_unchecked_focus.png" />
+    <None Include="qdarkstyle\rc\checkbox_unchecked_focus@2x.png" />
+    <None Include="qdarkstyle\rc\checkbox_unchecked_pressed.png" />
+    <None Include="qdarkstyle\rc\checkbox_unchecked_pressed@2x.png" />
+    <None Include="icons\delete.png" />
+    <None Include="icons\edit.png" />
+    <None Include="icons\gamingogs_esports_logo_v2_6aW_icon.ico" />
+    <None Include="icons\invalid.png" />
+    <None Include="qdarkstyle\rc\line_horizontal.png" />
+    <None Include="qdarkstyle\rc\line_horizontal@2x.png" />
+    <None Include="qdarkstyle\rc\line_horizontal_disabled.png" />
+    <None Include="qdarkstyle\rc\line_horizontal_disabled@2x.png" />
+    <None Include="qdarkstyle\rc\line_horizontal_focus.png" />
+    <None Include="qdarkstyle\rc\line_horizontal_focus@2x.png" />
+    <None Include="qdarkstyle\rc\line_horizontal_pressed.png" />
+    <None Include="qdarkstyle\rc\line_horizontal_pressed@2x.png" />
+    <None Include="qdarkstyle\rc\line_vertical.png" />
+    <None Include="qdarkstyle\rc\line_vertical@2x.png" />
+    <None Include="qdarkstyle\rc\line_vertical_disabled.png" />
+    <None Include="qdarkstyle\rc\line_vertical_disabled@2x.png" />
+    <None Include="qdarkstyle\rc\line_vertical_focus.png" />
+    <None Include="qdarkstyle\rc\line_vertical_focus@2x.png" />
+    <None Include="qdarkstyle\rc\line_vertical_pressed.png" />
+    <None Include="qdarkstyle\rc\line_vertical_pressed@2x.png" />
+    <None Include="qdarkstyle\rc\radio_checked.png" />
+    <None Include="qdarkstyle\rc\radio_checked@2x.png" />
+    <None Include="qdarkstyle\rc\radio_checked_disabled.png" />
+    <None Include="qdarkstyle\rc\radio_checked_disabled@2x.png" />
+    <None Include="qdarkstyle\rc\radio_checked_focus.png" />
+    <None Include="qdarkstyle\rc\radio_checked_focus@2x.png" />
+    <None Include="qdarkstyle\rc\radio_checked_pressed.png" />
+    <None Include="qdarkstyle\rc\radio_checked_pressed@2x.png" />
+    <None Include="qdarkstyle\rc\radio_unchecked.png" />
+    <None Include="qdarkstyle\rc\radio_unchecked@2x.png" />
+    <None Include="qdarkstyle\rc\radio_unchecked_disabled.png" />
+    <None Include="qdarkstyle\rc\radio_unchecked_disabled@2x.png" />
+    <None Include="qdarkstyle\rc\radio_unchecked_focus.png" />
+    <None Include="qdarkstyle\rc\radio_unchecked_focus@2x.png" />
+    <None Include="qdarkstyle\rc\radio_unchecked_pressed.png" />
+    <None Include="qdarkstyle\rc\radio_unchecked_pressed@2x.png" />
+    <QtRcc Include="qdarkstyle\style.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">style</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">style</InitFuncName>
+    </QtRcc>
+    <None Include="qdarkstyle\style.qss" />
+    <None Include="qdarkstyle\rc\toolbar_move_horizontal.png" />
+    <None Include="qdarkstyle\rc\toolbar_move_horizontal@2x.png" />
+    <None Include="qdarkstyle\rc\toolbar_move_horizontal_disabled.png" />
+    <None Include="qdarkstyle\rc\toolbar_move_horizontal_disabled@2x.png" />
+    <None Include="qdarkstyle\rc\toolbar_move_horizontal_focus.png" />
+    <None Include="qdarkstyle\rc\toolbar_move_horizontal_focus@2x.png" />
+    <None Include="qdarkstyle\rc\toolbar_move_horizontal_pressed.png" />
+    <None Include="qdarkstyle\rc\toolbar_move_horizontal_pressed@2x.png" />
+    <None Include="qdarkstyle\rc\toolbar_move_vertical.png" />
+    <None Include="qdarkstyle\rc\toolbar_move_vertical@2x.png" />
+    <None Include="qdarkstyle\rc\toolbar_move_vertical_disabled.png" />
+    <None Include="qdarkstyle\rc\toolbar_move_vertical_disabled@2x.png" />
+    <None Include="qdarkstyle\rc\toolbar_move_vertical_focus.png" />
+    <None Include="qdarkstyle\rc\toolbar_move_vertical_focus@2x.png" />
+    <None Include="qdarkstyle\rc\toolbar_move_vertical_pressed.png" />
+    <None Include="qdarkstyle\rc\toolbar_move_vertical_pressed@2x.png" />
+    <None Include="qdarkstyle\rc\toolbar_separator_horizontal.png" />
+    <None Include="qdarkstyle\rc\toolbar_separator_horizontal@2x.png" />
+    <None Include="qdarkstyle\rc\toolbar_separator_horizontal_disabled.png" />
+    <None Include="qdarkstyle\rc\toolbar_separator_horizontal_disabled@2x.png" />
+    <None Include="qdarkstyle\rc\toolbar_separator_horizontal_focus.png" />
+    <None Include="qdarkstyle\rc\toolbar_separator_horizontal_focus@2x.png" />
+    <None Include="qdarkstyle\rc\toolbar_separator_horizontal_pressed.png" />
+    <None Include="qdarkstyle\rc\toolbar_separator_horizontal_pressed@2x.png" />
+    <None Include="qdarkstyle\rc\toolbar_separator_vertical.png" />
+    <None Include="qdarkstyle\rc\toolbar_separator_vertical@2x.png" />
+    <None Include="qdarkstyle\rc\toolbar_separator_vertical_disabled.png" />
+    <None Include="qdarkstyle\rc\toolbar_separator_vertical_disabled@2x.png" />
+    <None Include="qdarkstyle\rc\toolbar_separator_vertical_focus.png" />
+    <None Include="qdarkstyle\rc\toolbar_separator_vertical_focus@2x.png" />
+    <None Include="qdarkstyle\rc\toolbar_separator_vertical_pressed.png" />
+    <None Include="qdarkstyle\rc\toolbar_separator_vertical_pressed@2x.png" />
+    <None Include="qdarkstyle\rc\transparent.png" />
+    <None Include="qdarkstyle\rc\transparent@2x.png" />
+    <None Include="qdarkstyle\rc\transparent_disabled.png" />
+    <None Include="qdarkstyle\rc\transparent_disabled@2x.png" />
+    <None Include="qdarkstyle\rc\transparent_focus.png" />
+    <None Include="qdarkstyle\rc\transparent_focus@2x.png" />
+    <None Include="qdarkstyle\rc\transparent_pressed.png" />
+    <None Include="qdarkstyle\rc\transparent_pressed@2x.png" />
+    <None Include="icons\valid.png" />
+    <None Include="qdarkstyle\rc\window_close.png" />
+    <None Include="qdarkstyle\rc\window_close@2x.png" />
+    <None Include="qdarkstyle\rc\window_close_disabled.png" />
+    <None Include="qdarkstyle\rc\window_close_disabled@2x.png" />
+    <None Include="qdarkstyle\rc\window_close_focus.png" />
+    <None Include="qdarkstyle\rc\window_close_focus@2x.png" />
+    <None Include="qdarkstyle\rc\window_close_pressed.png" />
+    <None Include="qdarkstyle\rc\window_close_pressed@2x.png" />
+    <None Include="qdarkstyle\rc\window_grip.png" />
+    <None Include="qdarkstyle\rc\window_grip@2x.png" />
+    <None Include="qdarkstyle\rc\window_grip_disabled.png" />
+    <None Include="qdarkstyle\rc\window_grip_disabled@2x.png" />
+    <None Include="qdarkstyle\rc\window_grip_focus.png" />
+    <None Include="qdarkstyle\rc\window_grip_focus@2x.png" />
+    <None Include="qdarkstyle\rc\window_grip_pressed.png" />
+    <None Include="qdarkstyle\rc\window_grip_pressed@2x.png" />
+    <None Include="qdarkstyle\rc\window_minimize.png" />
+    <None Include="qdarkstyle\rc\window_minimize@2x.png" />
+    <None Include="qdarkstyle\rc\window_minimize_disabled.png" />
+    <None Include="qdarkstyle\rc\window_minimize_disabled@2x.png" />
+    <None Include="qdarkstyle\rc\window_minimize_focus.png" />
+    <None Include="qdarkstyle\rc\window_minimize_focus@2x.png" />
+    <None Include="qdarkstyle\rc\window_minimize_pressed.png" />
+    <None Include="qdarkstyle\rc\window_minimize_pressed@2x.png" />
+    <None Include="qdarkstyle\rc\window_undock.png" />
+    <None Include="qdarkstyle\rc\window_undock@2x.png" />
+    <None Include="qdarkstyle\rc\window_undock_disabled.png" />
+    <None Include="qdarkstyle\rc\window_undock_disabled@2x.png" />
+    <None Include="qdarkstyle\rc\window_undock_focus.png" />
+    <None Include="qdarkstyle\rc\window_undock_focus@2x.png" />
+    <None Include="qdarkstyle\rc\window_undock_pressed.png" />
+    <None Include="qdarkstyle\rc\window_undock_pressed@2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include=".\ArkShopEditor_resource.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
